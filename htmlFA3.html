@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Screen Time Tracker</title>
+	<style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            background: linear-gradient(to right, #2193b0, #6dd5ed);
+            color: #fff;
+            padding: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+        .decor {
+            position: absolute;
+            width: 120px;
+            height: 120px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            filter: blur(12px);
+        }
+        .decor:nth-child(1) {
+            top: 5%;
+            left: 10%;
+        }
+        .decor:nth-child(2) {
+            bottom: 15%;
+            right: 10%;
+        }
+        .decor:nth-child(3) {
+            top: 40%;
+            left: 75%;
+        }
+        .decor:nth-child(4) {
+            bottom: 30%;
+            left: 15%;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+            display: inline-block;
+            width: 80%;
+            max-width: 500px;
+            text-align: left;
+            backdrop-filter: blur(10px);
+            position: relative;
+            z-index: 2;
+        }
+        .app-box {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+        }
+        .app {
+            background: rgba(50, 50, 50, 0.8);
+            padding: 15px;
+            border-radius: 8px;
+            border: 3px solid white;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+            text-align: center;
+            width: 30%;
+            font-weight: bold;
+        }
+        h1 {
+            font-size: 28px;
+            margin-bottom: 15px;
+            color: #fff;
+        }
+        p {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+        button {
+            margin-top: 15px;
+            padding: 12px 20px;
+            font-size: 18px;
+            font-weight: bold;
+            color: white;
+            background: #ff9800;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s ease-in-out;
+        }
+        button:hover {
+            background: #e68900;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="decor"></div>
+    <div class="decor"></div>
+    <div class="decor"></div>
+    <div class="decor"></div>
+    <h1>📱 Screen Time Tracker</h1>
+    <h2>The three most used applications of teenagers.</h2>
+    <p>How long was each application used in hours:</p>
+    <div class="container">
+        <div class="app-box">
+            <div class="app" id="facebook-box"><img src='https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg' alt='Facebook Logo' width='30'><br>Facebook: --h</div>
+            <div class="app" id="instagram-box"><img src='https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png' alt='Instagram Logo' width='30'><br>Instagram: --h</div>
+            <div class="app" id="tiktok-box"><img src='https://upload.wikimedia.org/wikipedia/en/a/a9/TikTok_logo.svg' alt='TikTok Logo' width='30'><br>TikTok: --h</div>
+        </div>
+        <p id="biggest"></p>
+        <p id="nth-letter"></p>
+        <p id="time-breakdown"></p>
+        <button onclick="generateScreenTime()">📊 Generate Screen Time</button>
+    </div>
+	<script src ="script5.js"></script>
+</body>
+</html>
